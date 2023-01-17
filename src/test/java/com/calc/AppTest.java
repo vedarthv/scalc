@@ -1,4 +1,4 @@
-package com.encircle;
+package com.calc;
 
 import static org.junit.Assert.assertTrue;
 
