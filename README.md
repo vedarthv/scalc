@@ -3,7 +3,7 @@ S-expression calculator
 
 ## Usage
 Please download the [`scalc.jar`](https://github.com/vedarthv/scalc/blob/9888e74db8abfcc312ad850ad7182bd535f18922/scalc.jar) file to run the code. 
-Then use the following command to use the program: `java -jar ./scalc.jar <arg>`.
+Then use the following command to use the program: `java -jar ./scalc.jar <arg>`. Please use `JDK 8` or more recent versions of Java.
 
 ## Technologies Used
 For this project I used Java and [ANTLR4](https://www.antlr.org/about.html). ANTLR is used to specify a grammer, which is then used to generate a Java interface which can be used to parse some given text. ANTLR is very powerful as it has extensive tooling such as the ability to generate parse trees. Here is a generated parse tree of the expression `(add 1 (multiply 5 (exponent 3 5)) 5 (multiply 4 2) 5)` using the grammer from [`Calc.g4`](https://github.com/vedarthv/scalc/blob/42d3b257b2cc64839a3e63807823886a1369a89e/src/main/java/com/antlr/Calc.g4):
