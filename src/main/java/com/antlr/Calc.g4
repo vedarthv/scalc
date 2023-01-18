@@ -11,13 +11,10 @@ grammar Calc;
 prog: (expr)+ EOF # Program
 ;
 
-expr: '(' op (DELIM expr)+ ')'  # Expression
-    | INT                       # Integer
-;
-
-op:  'exponent' # Exponent
-    |'multiply' # Multiply
-    |'add'      # Add
+expr: '(' 'exponent' (DELIM expr)+ ')'  # Exponent
+    | '(' 'multiply' (DELIM expr)+ ')'  # Multiply
+    | '(' 'add' (DELIM expr)+ ')'       # Add
+    | INT                               # Integer
 ;
 
 // Tokens

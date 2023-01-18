@@ -9,14 +9,8 @@ public class CalcVisitor extends CalcBaseVisitor<Integer> {
 
     @Override public Integer visitProgram(CalcParser.ProgramContext ctx) {
         int value = visit(ctx); // evaluate the expr child
-        //System.out.println(value); // print the result
-        return value;
-    }
-
-    @Override public Integer visitExpression(CalcParser.ExpressionContext ctx) {
-        Integer value = visit(ctx); // evaluate the expr child
         System.out.println(value); // print the result
-        return 0;
+        return value;
     }
 
     @Override public Integer visitExponent(CalcParser.ExponentContext ctx) {

@@ -12,12 +12,12 @@ public class Calc {
     public static void main(String[] args) throws Exception {
         // create a CharStream that reads from standard input
         //ANTLRInputStream input = new ANTLRInputStream(System.in); // create a lexer that feeds off of input CharStream
-        ANTLRInputStream input = new ANTLRInputStream("(add 1 1)");
-        CalcLexer lexer = new CalcLexer(input); // create a buffer of tokens pulled from the lexer
+        CharStream charStream = CharStreams.fromString("(add 1 1 1 (multiply 2 6) (exponent 3 1))");
+        CalcLexer lexer = new CalcLexer(charStream); // create a buffer of tokens pulled from the lexer
         CommonTokenStream tokens = new CommonTokenStream(lexer); // create a parser that feeds off the tokens buffer
         CalcParser parser = new CalcParser(tokens);
         ParseTreeVisitor visitor = new CalcVisitor();
-        int result = (int) visitor.visit(parser.prog());
+        int result = (int) visitor.visit(parser.expr());
 
         System.out.println(result); // print LISP-style tree
 

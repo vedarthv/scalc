@@ -1,7 +1,7 @@
 // Generated from java-escape by ANTLR 4.11.1
 
     package com.antlr; 
-    import java.util.*;
+    import java.util.*; 
 
 import org.antlr.v4.runtime.tree.ParseTreeVisitor;
 
@@ -21,12 +21,26 @@ public interface CalcVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitProgram(CalcParser.ProgramContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code Expression}
+	 * Visit a parse tree produced by the {@code Exponent}
 	 * labeled alternative in {@link CalcParser#expr}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitExpression(CalcParser.ExpressionContext ctx);
+	T visitExponent(CalcParser.ExponentContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code Multiply}
+	 * labeled alternative in {@link CalcParser#expr}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitMultiply(CalcParser.MultiplyContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code Add}
+	 * labeled alternative in {@link CalcParser#expr}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitAdd(CalcParser.AddContext ctx);
 	/**
 	 * Visit a parse tree produced by the {@code Integer}
 	 * labeled alternative in {@link CalcParser#expr}.
@@ -34,25 +48,4 @@ public interface CalcVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitInteger(CalcParser.IntegerContext ctx);
-	/**
-	 * Visit a parse tree produced by the {@code Exponent}
-	 * labeled alternative in {@link CalcParser#op}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitExponent(CalcParser.ExponentContext ctx);
-	/**
-	 * Visit a parse tree produced by the {@code Multiply}
-	 * labeled alternative in {@link CalcParser#op}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitMultiply(CalcParser.MultiplyContext ctx);
-	/**
-	 * Visit a parse tree produced by the {@code Add}
-	 * labeled alternative in {@link CalcParser#op}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitAdd(CalcParser.AddContext ctx);
 }
