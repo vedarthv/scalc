@@ -11,7 +11,7 @@ For this project I used Java and [ANTLR4](https://www.antlr.org/about.html). ANT
 ![parseTree](https://user-images.githubusercontent.com/87582836/213109614-8b36f292-c594-4b5b-8182-e558ac38584c.png)
 Normally a grammer is defined in a `*.g4` file and then it is complied using the ANTLR library. The generated classes can vary depending on your choice of having `visitor` and or `listener` classes. 
 
-TAfter the Java files are generated, ANTLR defines an interface for the respective `visitor` and/or `listener` classes and a base implementation which can be extended to do meaningful computation and evaluation of the grammer.
+ANTLR defines an interface for the respective `visitor` and/or `listener` Java classes and a base implementation which can be extended to do meaningful computation and evaluation of an expression following the specified grammer.
 
 ## File Index / Important Files
 - ANTLR Grammer File: [`Calc.g4`](https://github.com/vedarthv/scalc/blob/42d3b257b2cc64839a3e63807823886a1369a89e/src/main/java/com/antlr/Calc.g4)
